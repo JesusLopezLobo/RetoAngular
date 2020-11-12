@@ -1,0 +1,25 @@
+<form *ngIf="employerData" [formGroup]="formOwner" (submit)="submit()">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input 
+        matInput 
+        formControlName="name"
+        [(ngModel)]="employerData.employeeName" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="fill">
+        <mat-label>Salary</mat-label>
+        <input matInput formControlName="salary" 
+        [(ngModel)]="employerData.employeeSalary"/>
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput formControlName="age" 
+        [(ngModel)]="employerData.employeeAge"/>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="submit">Update</button>
+    
+  </form>
